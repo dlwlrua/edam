@@ -291,6 +291,15 @@
                     $('#section0 .news .news_icon').addClass('colorChange');
                     $('footer .left .sns a').addClass('colorChange');
                 }
+            },
+            afterLoad:function(origin, destination, direction){
+                if(origin.anchor == 'secondPage'){
+                    $('#section1 .sec2_wrap .sec2_left .longbox').removeClass('dpblock');
+                    $('#section1 .sec2_wrap .sec2_left .smallbox').removeClass('dpblock');
+                }else if(origin.anchor == 'firstPage' && direction == 'down' || origin.anchor == '3rdPage' && direction == 'up'){
+                    $('#section1 .sec2_wrap .sec2_left .longbox').addClass('dpblock');
+                    $('#section1 .sec2_wrap .sec2_left .smallbox').addClass('dpblock');
+                }
             }
             // afterLoad:function(origin, destination, direction){
             //     if(origin.anchor == 'firstPage' && direction == 'up' || origin.anchor == 'secondPage' && direction == 'down'){
