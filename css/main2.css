@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+* { margin: 0; padding: 0;}
+a { text-decoration: none; color: #333; display: block;}
+li { list-style: none;}
+html, body { font-family: 'Nanum Gothic', sans-serif;}
+img { width: 100%;}
+header, section, footer {width: 100%; float: left;}
+header, section, footer, div, ul, li { box-sizing: border-box;}
+body { 
+    position:relative;
+
+}
+/*pc 버전*/
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vw;
+    padding: 1vw;
+    position: fixed;
+    z-index: 50;
+}
+header .logo img {
+    width: 12vw;
+}
+header .menu > ul{
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.8vw;
+    
+}
+header .menu > ul > li > a {
+    font-size: 0.8vw;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+header .hamburger img {
+    width: 1vw;
+    margin-top: 0.8vw;
+    margin-left: 12vw;
+    margin-right: 1vw;
+}
+header .menu ul li {
+    position: relative;
+}
+header .menu .sub {
+    width: 8vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    position: absolute;
+    top: -2.8vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 2.8vw;
+}
+
+header .menu .sub li:first-child a {
+    font-size: 0.8vw;
+    margin-bottom: 1vw;
+    font-weight: bold;
+}
+header .menu .sub li a {
+    text-align: center;
+    padding-bottom: 1vw;
+    font-size: 0.7vw;
+    color: #fff;
+}
+header .menu .sub .sub_top img {
+    width: 1vw;
+}
+.hamburger_menu {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #333;
+    z-index: 55;
+}
+.btn_wrap {
+    position: relative;
+}
+.hamburger_menu .x_btn {
+    position: absolute;
+    width: 1vw;
+    right: 2vw;
+    top: 2.7vw;
+}
+.hamburger_menu .ham_menu > ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 5.5vw;
+    padding-top: 5vw;
+    border-top :0.5px solid #efefef;
+}
+.hamburger_menu .ham_menu > ul > li {
+    text-align: center;
+    margin-right: 5vw;
+}
+.hamburger_menu .ham_menu > ul > li:last-child {
+    margin-right: 0;
+}
+.hamburger_menu .ham_menu > ul > li > p {
+    color:#fff;
+    font-weight: bold;
+    margin-bottom: 1vw;
+    font-size: 0.9vw;
+}
+.ham_menu .sub li {
+    height: 2vw;
+}
+.ham_menu .sub li a {
+    font-size: 0.7vw;
+    color: #999;
+    padding-top: 0.9vw;
+    padding-bottom:0.3vw;
+}
+.ham_menu .sub li a:hover {
+    border-bottom: 2px solid #999;
+}
+footer {
+    position: fixed;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    padding: 1vw 3vw;
+    font-weight: bold;
+    color: #fff;
+}
+footer .left,
+footer .right {
+    display: flex;
+}
+footer address {
+    font-style: normal;
+    margin-right: 1vw;
+}
+footer .sns img {
+    width: 1vw;
+    padding-right: 0.2vw;
+}
+footer .right p:first-child {
+    margin-right: 1vw;
+}
+footer .right p span {
+    color: #999;
+    margin-right: 1vw;
+}
+.lang {
+    width: 1.8vw;
+    height: 3.1vw;
+    line-height: 1.5vw;
+    background-color: #ab8ac7;
+    text-align: center;
+    position: fixed;
+    left: 5vw;
+    top: 50%;
+    font-weight: bold;
+    font-size: 0.7vw;
+}
+.lang ul li:last-child {
+    background-color: #fff;
+    width: 1.6vw;
+    margin-left: 0.1vw;
+    margin-top: 0.1vw;
+    
+}
+#fp-nav {
+    margin-right: 5vw;
+    z-index: 50;
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: #ab8ac7;
+}
+.fp-nav ul li a span:last-child {
+    background-image: url(../icon/icon_page_bar_purple.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* #section0 {
+    animation: background_change 10s infinite;
+}
+@keyframes background_change {
+    0% {background-color: #333;}
+    25% { background-color: #fff;}
+    50% { background-color: #fff;}
+    70% { background-color: #333;}
+    100% {background-color: #333;}
+}
+.menu > ul > li > a {
+    animation: color_change 10s infinite;
+}
+
+@keyframes color_change {
+    0% {color: #fff;}
+    25% { color: #333;}
+    50% { color: #333;}
+    70% { color: #fff;}
+    100% {color: #fff;}
+} */
+
+#section0 .logo {
+    width: 40vw;
+    margin: 0 auto;
+    margin-bottom: 5vw;
+}
+#section0 .logo p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1vw;
+    letter-spacing: 0.2vw;
+    color: #fff;
+}
+#section0 .news {
+    width: 30vw;
+    height: 2vw;
+    margin: 0 auto;
+    margin-bottom: 3vw;
+    background-color: #333;
+    border: 1px solid #ab8ac7;
+    display: flex;
+    justify-content: center;
+    line-height: 2vw;
+    overflow: hidden;
+}
+#section0 .news .news_icon {
+    width: 0.8vw;
+    margin: 0.2vw 1vw 0 0;
+    position: relative;
+}
+#section0 .news .news_icon:after {
+    content:"|";
+    position: absolute;
+    right: -0.7vw;
+    top: -0.2vw;
+    color: #fff;
+}
+#section0 .news .news_in div a {
+    color: #fff;
+}
+#section0 .down_btn {
+    width: 3vw;
+    margin: 0 auto;
+}
+#section0 .down_btn img {
+    width: 3vw;
+}
+
+
+
+/*노트북 버전*/
+@media screen and (max-width: 1600px){
+
+}
+/*태블릿 버전*/
+@media screen and (max-width: 1280px){
+
+}
+/*모바일 버전*/
+@media screen and (max-width: 480px){
+
+}

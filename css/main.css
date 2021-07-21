@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+* { margin: 0; padding: 0;}
+a { text-decoration: none; color: #333; display: block;}
+li { list-style: none;}
+html, body { font-family: 'Nanum Gothic', sans-serif;}
+img { width: 100%;}
+header, section, footer {width: 100%; float: left;}
+header, section, footer, div, ul, li { box-sizing: border-box;}
+body { 
+    position:relative;
+
+}
+/*pc 버전*/
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vw;
+    padding: 1vw;
+    position: fixed;
+    z-index: 50;
+}
+header .logo  a {
+    width: 15vw;
+    height: 3vw;
+    text-indent: -9999px;
+    background-image: url(../img/EDAM_Logo6.png);
+    background-size: 30vw;
+    background-repeat: no-repeat;
+    background-position: left;
+    
+}
+header .logo  a.colorChange {
+    animation: main_logo_change 10s step-start infinite;
+}
+@keyframes main_logo_change {
+    0% { background-position: right;}
+    25% { background-position: left;}
+    50% { background-position: left;}
+    75% { background-position: right;}
+    100% { background-position: right;}
+}
+header .menu > ul{
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.8vw;
+    
+}
+header .menu > ul > li > a {
+    font-size: 0.8vw;
+    font-weight: bold;
+    text-align: center;
+}
+header .hamburger img {
+    width: 1vw;
+    margin-top: 0.8vw;
+    margin-left: 12vw;
+    margin-right: 1vw;
+}
+header .menu ul li {
+    position: relative;
+}
+header .menu .sub {
+    width: 8vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    position: absolute;
+    top: -2.8vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 2.8vw;
+}
+
+header .menu .sub li:first-child a {
+    font-size: 0.8vw;
+    margin-bottom: 1vw;
+    font-weight: bold;
+}
+header .menu .sub li a {
+    text-align: center;
+    padding-bottom: 1vw;
+    font-size: 0.7vw;
+    color: #fff;
+}
+header .menu .sub .sub_top img {
+    width: 1vw;
+}
+.hamburger a {
+    text-indent: -9999px;
+    background-image: url(../icon/hamburger-menu2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    width: 1.2vw;
+    height: 1vw;
+    margin-top: 0.7vw;
+    margin-right: 1vw;
+}
+.hamburger a.colorChange {
+    animation: main_logo_change 10s step-start infinite;
+}
+.hamburger_menu {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #333;
+    z-index: 55;
+}
+.btn_wrap {
+    position: relative;
+}
+.hamburger_menu .x_btn {
+    position: absolute;
+    width: 1vw;
+    right: 2vw;
+    top: 2.7vw;
+}
+.hamburger_menu .ham_menu > ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 5.5vw;
+    padding-top: 5vw;
+    border-top :0.5px solid #efefef;
+}
+.hamburger_menu .ham_menu > ul > li {
+    text-align: center;
+    margin-right: 5vw;
+}
+.hamburger_menu .ham_menu > ul > li:last-child {
+    margin-right: 0;
+}
+.hamburger_menu .ham_menu > ul > li > p {
+    color:#fff;
+    font-weight: bold;
+    margin-bottom: 1vw;
+    font-size: 0.9vw;
+}
+.ham_menu .sub li {
+    height: 2vw;
+}
+.ham_menu .sub li a {
+    font-size: 0.7vw;
+    color: #999;
+    padding-top: 0.9vw;
+    padding-bottom:0.3vw;
+}
+.ham_menu .sub li a:hover {
+    border-bottom: 2px solid #999;
+}
+footer {
+    position: fixed;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    padding: 1vw 3vw;
+    font-weight: bold;
+    color: #999;
+}
+footer .left,
+footer .right {
+    display: flex;
+}
+footer address {
+    font-style: normal;
+    margin-right: 1vw;
+}
+footer address.colorChange {
+    animation: footer_change 10s ease-in-out infinite;
+}
+@keyframes footer_change {
+    0% {color: #fff;}
+    25% { color: #999;}
+    50% { color: #999;}
+    70% { color: #fff;}
+    100% {color: #fff;}
+}
+footer .sns img {
+    width: 1vw;
+    padding-right: 0.2vw;
+}
+footer .right p:first-child {
+    margin-right: 1vw;
+}
+footer .right p.colorChange {
+    animation: footer_change 10s ease-in-out infinite;
+}
+footer .right p span {
+    color: #333;
+    margin-right: 1vw;
+}
+footer .right p span.colorChange {
+    animation: footerspan_change 10s ease-in-out infinite;
+}
+footer .left .sns {
+    display: flex;
+    
+}
+footer .left .sns a {
+    text-indent: -9999px;
+    width: 1.7vw;
+    height: 1.5vw;
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin-right: 0.1vw;
+    margin-top: -0.1vw;
+}
+footer .left .sns a.colorChange {
+    animation: main_logo_change 10s step-start infinite;
+}
+footer .left .sns a:first-child {
+    background-image: url(../icon/Facebook2.png);
+}
+footer .left .sns a:nth-child(2) {
+    background-image: url(../icon/insta2.png);
+}
+footer .left .sns a:last-child {
+    background-image: url(../icon/youtube2.png);
+}
+@keyframes footerspan_change {
+    0% {color: #efefef;}
+    25% { color: #555;}
+    50% { color: #555;}
+    70% { color: #efefef;}
+    100% {color: #efefef;}
+}
+.lang {
+    width: 1.8vw;
+    height: 3.1vw;
+    line-height: 1.5vw;
+    background-color: #ab8ac7;
+    text-align: center;
+    position: fixed;
+    left: 5vw;
+    top: 50%;
+    font-weight: bold;
+    font-size: 0.7vw;
+}
+.lang ul li:last-child {
+    background-color: #fff;
+    width: 1.6vw;
+    margin-left: 0.1vw;
+    margin-top: 0.1vw;
+}
+.lang ul li:last-child.colorChange {
+    animation: background_change 10s ease-in-out infinite;
+}
+.lang ul li a.colorChange {
+    animation: color_change 10s step-start infinite;
+}
+#fp-nav {
+    margin-right: 5vw;
+    z-index: 50;
+}
+#fp-nav ul li a span {
+    background: #ab8ac7;
+    border-radius: 0;
+    width: 15px;
+    height: 2px
+}
+.fp-nav ul li a span:last-child {
+    background-image: url(../icon/icon_page_bar_purple.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#fp-nav ul li a.active span {
+    background-color: transparent;
+    border: 2px solid #ab8ac7;
+    left: 10px;
+    top: 3px;
+}
+#section0.colorChange {
+    animation: background_change 10s ease-in-out infinite;
+}
+@keyframes background_change {
+    0% {background-color: #232323;}
+    25% { background-color: #fff;}
+    50% { background-color: #fff;}
+    70% { background-color: #232323;}
+    100% {background-color: #232323;}
+}
+.menu > ul > li > a.colorChange {
+    animation: color_change 10s step-start infinite;
+    
+}
+
+@keyframes color_change {
+    0% {color: #fff;}
+    25% { color: #333;}
+    50% { color: #333;}
+    70% { color: #fff;}
+    100% {color: #fff;}
+}
+
+#section0 .sec_logo {
+    width: 40vw;
+    margin: 0 auto;
+    margin-bottom: 5vw;
+}
+#section0 .sec_logo a {
+    width: 100%;
+    height: 9vw;
+    text-indent: -9999px;
+    background-image: url(../img/EDAM_Logo5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    
+}
+#section0 .sec_logo a.colorChange {
+    animation: logo_change 10s step-start infinite;
+}
+@keyframes logo_change {
+    0% { background-position: right;}
+    25% { background-position: left;}
+    50% { background-position: left;}
+    70% { background-position: right;}
+    100% { background-position: right;}
+}
+
+#section0 .sec_logo p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1vw;
+    letter-spacing: 0.2vw;
+    
+}
+#section0 .sec_logo p.colorChange {
+    animation: font_change 10s step-start infinite;
+}
+@keyframes font_change {
+    0% {color: #fff;}
+    25% { color: #333;}
+    50% { color: #333;}
+    70% { color: #fff;}
+    100% {color: #fff;}
+}
+#section0 .news {
+    width: 30vw;
+    height: 2vw;
+    margin: 0 auto;
+    margin-bottom: 3vw;
+    background-color: #fff;
+    border: 1px solid #ab8ac7;
+    display: flex;
+    justify-content: center;
+    line-height: 2vw;
+    overflow: hidden;
+    
+}
+#section0 .news.colorChange {
+    animation: news_change 10s ease-in-out infinite;
+}
+@keyframes news_change {
+    0% {background-color: #232323;}
+    25% { background-color: #fff;}
+    50% { background-color: #fff;}
+    70% { background-color: #232323;}
+    100% {background-color: #232323;}
+}
+#section0 .news .news_icon {
+    width: 1vw;
+    height: 1vw;
+    margin: 0.5vw 1vw 0 0;
+    position: relative;
+    text-indent:-9999px;
+    background-image: url(../icon/news_icon2.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#section0 .news .news_icon.colorChange {
+    animation: logo_change 10s step-start infinite;
+}
+#section0 .news .news_icon:after {
+    content:"|";
+    position: absolute;
+    right: -0.6vw;
+    top: -0.5vw;
+    color: #999;
+    text-indent: 9999px;
+    
+}
+
+#section0 .news .news_in a.colorChange {
+    animation: font_change 10s step-start infinite;
+}
+#section0 .down_btn {
+    width: 2.5vw;
+    height: 2.5vw;
+    border: 1px solid #ab8ac7;
+    margin: 0 auto;
+}
+#section0 .down_btn a {
+    margin:0 auto;
+    text-indent: -9999px;
+    width: 0;
+    height:0;
+    margin-top: 1vw;
+    border-top: 0.5vw solid #efefef;
+    border-right: 0.5vw solid transparent;
+    border-bottom: 0.5vw solid transparent;
+    border-left: 0.5vw solid transparent;
+}
+#section0 .down_btn a.colorChange {
+    animation: border_color 10s step-start infinite;
+}
+@keyframes border_color {
+    0% {border-top: 0.5vw solid #fff;}
+    25% { border-top: 0.5vw solid #333;}
+    50% { border-top: 0.5vw solid #333;}
+    70% { border-top: 0.5vw solid #fff;}
+    100% {border-top: 0.5vw solid #fff;}
+}
+#section1 .sec2_wrap {
+    width:1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#section1 .sec2_wrap .sec2_left {
+    position: relative;
+}
+#section1 .sec2_wrap .sec2_left div {
+    position: absolute;
+}
+#section1 .sec2_wrap .sec2_left .longbox {
+    width: 200px;
+    height: 500px;
+    background-color: rgba(245,229,55,0.2);
+    right: -410px;
+    top: -20px;
+    display: none;
+    
+}
+#section1 .sec2_wrap .sec2_left .smallbox {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(212,198,47,0.2);
+    right: -460px;
+    bottom:90px;
+    display:none;
+}
+#section1 .sec2_wrap .sec2_left .longbox.dpblock,
+#section1 .sec2_wrap .sec2_left .smallbox.dpblock {
+    display: block;
+}
+#section1 .sec2_wrap .sec2_left .sec2_left_photo {
+    width: 385px;
+    height: 410px;
+}
+#section1 .sec2_wrap .sec2_left .sec2_left_photo a {
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+    background-image: url(../img/ShinSaeKyeong.png);
+    background-position: center 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#section1 .sec2_wrap .sec2_right .line {
+    width: 10px;
+    height: 200px;
+    background-color: #333;
+}
+#section1 .sec2_wrap .sec2_right h1{
+    font-size: 1.5vw;
+    margin-top: 1vw;
+}
+#section1 .sec2_wrap .sec2_right .sec2_right_photo {
+    width: 695px;
+    height: 350px;
+}
+#section1 .sec2_wrap .sec2_right .sec2_right_photo a {
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+    background-image: url(../img/IU.png);
+    background-position: center  5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 1vw;
+}
+
+
+
+/*노트북 버전*/
+@media screen and (max-width: 1600px){
+
+}
+/*태블릿 버전*/
+@media screen and (max-width: 1280px){
+
+}
+/*모바일 버전*/
+@media screen and (max-width: 480px){
+
+}
