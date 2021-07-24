@@ -199,7 +199,7 @@ footer .left .sns {
 }
 footer .left .sns a {
     text-indent: -9999px;
-    width: 1.7vw;
+    width: 1.3vw;
     height: 1.5vw;
     background-size: cover;
     background-position: left;
@@ -211,13 +211,13 @@ footer .left .sns a.colorChange {
     animation: main_logo_change 10s step-start infinite;
 }
 footer .left .sns a:first-child {
-    background-image: url(../icon/Facebook2.png);
+    background-image: url(../icon/Facebook3.png);
 }
 footer .left .sns a:nth-child(2) {
-    background-image: url(../icon/insta2.png);
+    background-image: url(../icon/insta3.png);
 }
 footer .left .sns a:last-child {
-    background-image: url(../icon/youtube2.png);
+    background-image: url(../icon/youtube3.png);
 }
 @keyframes footerspan_change {
     0% {color: #efefef;}
@@ -433,7 +433,6 @@ footer .left .sns a:last-child {
     background-color: rgba(245,229,55,0.2);
     right: -410px;
     top: -20px;
-    display: none;
     
 }
 #section1 .sec2_wrap .sec2_left .smallbox {
@@ -442,12 +441,20 @@ footer .left .sns a:last-child {
     background-color: rgba(212,198,47,0.2);
     right: -460px;
     bottom:90px;
-    display:none;
 }
-#section1 .sec2_wrap .sec2_left .longbox.dpblock,
+@keyframes dpblock {
+    0% { background-color: transparent};
+    25% { background-color: transparent};
+    50% { background-color: rgba(245,229,55,0.2)};
+    75% { background-color: rgba(245,229,55,0.2)};
+    100% { background-color: rgba(245,229,55,0.2)};
+}
+/* #section1 .sec2_wrap .sec2_left .longbox.dpblock,
 #section1 .sec2_wrap .sec2_left .smallbox.dpblock {
-    display: block;
-}
+    
+    animation: dpblock 10s infinite;
+    
+} */
 #section1 .sec2_wrap .sec2_left .sec2_left_photo {
     width: 385px;
     height: 410px;
@@ -461,6 +468,10 @@ footer .left .sns a:last-child {
     background-repeat: no-repeat;
     background-size: cover;
     
+}
+#section1 .sec2_wrap .sec2_right .line_wrap {
+    width: 120px;
+    height: 200px;
 }
 #section1 .sec2_wrap .sec2_right .line {
     width: 10px;
@@ -485,6 +496,267 @@ footer .left .sns a:last-child {
     background-size: cover;
     margin-top: 1vw;
 }
+#section2 .sec3_wrap {
+    width: 1200px;
+    height: 550px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#section2 .sec3_wrap .sec3_left .line_wrap2 {
+    width: 10px;
+    height: 90px;
+}
+#section2 .sec3_wrap .sec3_left .line_wrap2 .line2 {
+    width: 10px;
+    height: 90px;
+    background-color: #333;
+}
+#section2 .sec3_wrap .sec3_left h1 {
+    font-size: 1.5vw;
+    margin-top: 1vw;
+}
+#section2 .sec3_wrap .sec3_left .detail {
+    margin-top: 3vw;
+    border: 1px solid #ab8ac7;
+    width: 170px;
+    height: 45px;
+    font-size: 0.7vw;
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
+    display: flex;
+}
+#section2 .sec3_wrap .sec3_left .detail:hover {
+    background-color: #ab8ac7;
+}
+#section2 .sec3_wrap .sec3_left .detail a {
+    color: #ab8ac7;
+    margin-left: 1vw;
+}
+#section2 .sec3_wrap .sec3_left .detail span {
+    width: 0vw;
+    height: 0vw;
+    margin-left: 2vw;
+    margin-top: 17px;
+    border-top: 0.3vw solid transparent;
+    border-right: 0.3vw solid transparent;
+    border-bottom: 0.3vw solid transparent;
+    border-left: 0.3vw solid #ab8ac7;
+    cursor: pointer;
+}
+#section2 .sec3_wrap .sec3_left .detail:hover a {
+    color: #fff;
+}
+#section2 .sec3_wrap .sec3_left .detail:hover span {
+    border-left: 0.3vw solid #fff;
+}
+#section2 .sec3_wrap .sec3_left ul {
+    display: flex;
+    margin-top: 2.4vw;
+    
+}
+#section2 .sec3_wrap .sec3_left ul li {
+    width: 280px;
+    margin-right: 1vw;
+    position: relative;
+}
+#section2 .sec3_wrap .sec3_left ul li > img {
+    transition: all 0.5s;
+}
+#section2 .sec3_wrap .sec3_left ul li:hover > img {
+    /* filter: grayscale(50%); */
+}
+#section2 .sec3_wrap .sec3_left ul li .black_30 {
+    position: absolute;
+    width: 100%;
+    height: 259px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#section2 .sec3_wrap .sec3_left ul li .black_30 a {
+    margin-left: 4vw;
+    margin-top: 5.2vw;
+    
+}
+#section2 .sec3_wrap .sec3_left ul li .black_30 a img {
+    width: 7vw;
+    transition: all 0.5s;
+}
+
+#section2 .sec3_wrap .sec3_left ul li:nth-child(2) .black_30 a img {
+    width: 10vw;
+    margin-left: -1.5vw;
+    margin-top: 0.8vw;
+}
+#section2 .sec3_wrap .sec3_left ul li:last-child .black_30 a img {
+    width: 6vw;
+    margin-left: 0.4vw;
+    margin-top: 0.5vw;
+}
+#section2 .sec3_wrap .sec3_left ul li:hover .black_30 a img {
+    transform: scale(0.8);
+}
+#section2 .sec3_wrap .sec3_left ul li img {
+    position: absolute;
+}
+#section2 .sec3_wrap .sec3_left ul li .border {
+    position:absolute;
+    width: 100%;
+    height: 258px;
+    border: 2px solid #fff;
+    opacity: 0;
+    transition: all .5s;
+}
+#section2 .sec3_wrap .sec3_left ul li .border a {
+    color: #fff;
+    position: absolute;
+    right: 1vw;
+    bottom: 1vw;
+    font-size: 2vw;
+}
+#section2 .sec3_wrap .sec3_left ul li:hover .border {
+    transform: scale(0.8);
+    opacity: 1;
+}
+#section2 .sec3_wrap .sec3_left ul li:last-child {
+    margin-right: 0;
+}
+#section2 .sec3_wrap .sec3_right > div {
+    width: 280px;
+    height: 175px;
+    margin: 0.43vw 0 0 0;
+    position: relative;
+}
+#section2 .sec3_wrap .sec3_right > div .right_black {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+#section2 .sec3_wrap .sec3_right > div .right_black a {
+    width: 7vw;
+    margin: 0 auto;
+    margin-top: 3.5vw;
+    transition: all 0.5s;
+}
+#section2 .sec3_wrap .sec3_right > div:nth-child(2) .right_black a {
+    width: 8vw;
+    margin-top: 4vw;
+}
+#section2 .sec3_wrap .sec3_right > div:hover .right_black a {
+    transform: scale(0.8);
+}
+#section2 .sec3_wrap .sec3_right > div .right_border {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    opacity:0;
+    transition: all 0.5s
+}
+#section2 .sec3_wrap .sec3_right > div:hover .right_border {
+    transform: scale(0.8);
+    opacity:1
+}
+#section2 .sec3_wrap .sec3_right > div .right_border a {
+    position: absolute;
+    color: #fff;
+    right: 1vw;
+    bottom: 1vw;
+    font-size: 1.3vw;
+}
+#section2 .sec3_wrap .sec3_right > div > img {
+    width: 280px;
+    height: 175px;
+    position: absolute;
+}
+#section3 .sec4_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:flex-start;
+    margin-bottom: 5vw;
+}
+#section3 .sec4_wrap .sec4_left img {
+    width: 600px;
+    height: 345px;
+}
+#section3 .sec4_wrap .sec4_left .sec4_longbox {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(239,239,239,0.4);
+    right: 2vw;
+    bottom: -9vw;
+}
+#section3 .sec4_wrap .sec4_left .sec4_smallbox {
+    width: 170px;
+    height: 170px;
+    background-color: rgba(221,221,221,0.4);
+    right: -2vw;
+    bottom: -13vw;
+}
+#section3 .sec4_wrap .sec4_left {
+    position: relative;
+    width: 600px;
+    height: 345px;
+}
+#section3 .sec4_wrap .sec4_left div {
+    position: absolute;
+}
+#section3 .sec4_wrap .sec4_right {
+    margin-left: 5vw;
+}
+#section3 .sec4_wrap .sec4_right .sec4_line_wrap {
+    width: 10px;
+    height: 315px;
+}
+#section3 .sec4_wrap .sec4_right .sec4_line_wrap .line3 {
+    width: 10px;
+    height: 315px;
+    background-color: black;
+}
+#section3 .sec4_wrap .sec4_right h1 {
+    font-size: 1.5vw;
+    margin-top: 1vw;
+}
+#section3 .sec4_wrap .sec4_right .sec4_detail {
+    margin-top: 3vw;
+    border: 1px solid #ab8ac7;
+    width: 170px;
+    height: 45px;
+    font-size: 0.7vw;
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
+    display: flex;
+}
+#section3 .sec4_wrap .sec4_right .sec4_detail:hover {
+    background-color: #ab8ac7;
+}
+#section3 .sec4_wrap .sec4_right .sec4_detail a {
+    color: #ab8ac7;
+    margin-left: 1vw;
+}
+#section3 .sec4_wrap .sec4_right .sec4_detail span {
+    width: 0vw;
+    height: 0vw;
+    margin-left: 2vw;
+    margin-top: 17px;
+    border-top: 0.3vw solid transparent;
+    border-right: 0.3vw solid transparent;
+    border-bottom: 0.3vw solid transparent;
+    border-left: 0.3vw solid #ab8ac7;
+    cursor: pointer;
+}
+#section3 .sec4_wrap .sec4_right .sec4_detail:hover a {
+    color: #fff;
+}
+#section3 .sec4_wrap .sec4_right .sec4_detail:hover span {
+    border-left: 0.3vw solid #fff;
+}
+
 
 
 

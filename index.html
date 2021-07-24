@@ -53,7 +53,7 @@
                         <li><a href="#">Shin SaeKyeong</a></li>
                     </ul>
                 </li>
-                <li><a href="#">madeEDAM</a></li>
+                <li><a href="https://www.madeedam.com">madeEDAM</a></li>
                 <li class="menu_3">
                     <a href="#">AUDITION</a>
                     <ul class="sub sub3">
@@ -143,20 +143,104 @@
                         <div class="smallbox"></div>
                     </div>
                     <div class="sec2_right">
-                        <div class="line"></div>
+                        <div class="line_wrap">
+                            <div class="line"></div>
+                        </div>
                         <h1>ARTISTS</h1>
                         <div class="sec2_right_photo"><a href="#">아이유</a></div>
                     </div>
                 </div>
             </div>
             <div class="section" id="section2">
-                <div class="intro">
-                    <h1>Enjoy it</h1>
+                <div class="sec3_wrap">
+                    <div class="sec3_left">
+                        <div class="line_wrap2"><div class="line2"></div></div>
+                        <h1>WORKS</h1>
+                        <div class="detail">
+                            <a href="#">DETAIL MORE</a>
+                            <span></span>
+                        </div>
+                        <ul>
+                            <li>
+                                <img src="img/1-1.png" alt="라일락">
+                                <div class="black_30">
+                                    <a href="#"><img src="img/lilac_text.png" alt="라일락텍스트"></a>
+                                </div>
+                                <div class="border">
+                                    
+                                    <a href="#">+</a>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/2-1.png" alt="챗셔">
+                                <div class="black_30">
+                                    <a href="#"><img src="img/chatshire_text.png" alt="챗셔텍스트"></a>
+                                </div>
+                                <div class="border">
+                                    
+                                    <a href="#">+</a>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/3-1.png" alt="팔레트">
+                                <div class="black_30">
+                                    <a href="#"><img src="img/palette_text.png" alt="팔레트텍스트"></a>
+                                </div>
+                                <div class="border">
+                                    
+                                    <a href="#">+</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sec3_right">
+                        <div>
+                            <img src="img/Mymister2.png" alt="나의아저씨">
+                            <div class="right_black">
+                                <a href="#"><img src="img/mymister_text.png" alt="나의아저씨텍스트"></a>
+                            </div>
+                            <div class="right_border">
+                                <a href="#">+</a>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/narsha2.png" alt="육룡이나르샤">
+                            <div class="right_black">
+                                <a href="#"><img src="img/narsha_text.png" alt="육룡이나르샤텍스트"></a>
+                            </div>
+                            <div class="right_border">
+                                <a href="#">+</a>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/Godhand2.png" alt="타짜">
+                            <div class="right_black">
+                                <a href="#"><img src="img/godhand_text.png" alt="타짜텍스트"></a>
+                            </div>
+                            <div class="right_border">
+                                <a href="#">+</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="section" id="section3">
-                <div class="intro">
-                    <h1>HAHAHA</h1>
+                <div class="sec4_wrap">
+                    <div class="sec4_left">
+                        <div class="sec4_photo"><img src="img/madebyedam.png" alt="이담"></div>
+                        <div class="sec4_longbox"></div>
+                        <div class="sec4_smallbox"></div>
+                    </div>
+                    <div class="sec4_right">
+                        <div class="sec4_line_wrap">
+                            <div class="line3"></div>
+                        </div>
+                        <h1>EDAM</h1>
+                        <div class="sec4_detail">
+                            <a href="#">DETAIL MORE</a>
+                            <span></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -205,6 +289,41 @@
                     $('#section0 .down_btn a').addClass('colorChange');
                     $('#section0 .news .news_icon').addClass('colorChange');
                     $('footer .left .sns a').addClass('colorChange');
+                }
+                if(origin.anchor == 'firstPage'){
+                    $('.longbox').hide();
+                    $('.smallbox').hide();
+                    $('.line').hide();
+                }
+                if(origin.anchor == 'firstPage' && destination.anchor == 'secondPage'){
+                    $('.line').slideDown();
+                    $('.longbox').fadeIn(2000);
+                    $('.smallbox').fadeIn(1000);
+                }
+                
+                if(origin.anchor == '3rdPage' && destination.anchor == 'secondPage'){
+                    $('.line').slideDown();
+                    $('.longbox').fadeIn(2500);
+                    $('.smallbox').fadeIn(1500);
+                }
+                if(origin.anchor == 'firstPage'){
+                    $('.line2').hide();
+                }
+                if(origin.anchor == 'secondPage' && destination.anchor == '3rdPage'){
+                    $('.line2').slideDown();
+                }
+                if(origin.anchor == '4thPage' && destination.anchor == '3rdPage'){
+                    $('.line2').slideDown();
+                }
+                if(origin.anchor == 'firstPage'){
+                    $('.line3').hide();
+                    $('.sec4_longbox').hide();
+                    $('.sec4_smallbox').hide();
+                }
+                if(origin.anchor == '3rdPage' && destination.anchor == '4thPage'){
+                    $('.line3').slideDown();
+                    $('.sec4_longbox').fadeIn(3000);
+                    $('.sec4_smallbox').fadeIn(1500);
                 }
                 // if(origin.anchor== 'secondPage' && destination.amchor== 'firstPage'){
                 //     $('.menu > ul > li > a').addClass('colorChange');
@@ -272,6 +391,7 @@
                     $('#section0 .down_btn a').removeClass('colorChange');
                     $('#section0 .news .news_icon').removeClass('colorChange');
                     $('footer .left .sns a').removeClass('colorChange');
+                    
                 }else if(origin.anchor == 'secondPage' && direction == 'up' || origin.anchor == '4thPage' && direction == 'down'){
                     $('.menu > ul > li > a').addClass('colorChange');
                     $('.lang ul li a').addClass('colorChange');
@@ -290,27 +410,25 @@
                     $('#section0 .down_btn a').addClass('colorChange');
                     $('#section0 .news .news_icon').addClass('colorChange');
                     $('footer .left .sns a').addClass('colorChange');
-                }
-            },
-            afterLoad:function(origin, destination, direction){
-                if(origin.anchor == 'secondPage'){
-                    $('#section1 .sec2_wrap .sec2_left .longbox').removeClass('dpblock');
-                    $('#section1 .sec2_wrap .sec2_left .smallbox').removeClass('dpblock');
-                }else if(origin.anchor == 'firstPage' && direction == 'down' || origin.anchor == '3rdPage' && direction == 'up'){
-                    $('#section1 .sec2_wrap .sec2_left .longbox').addClass('dpblock');
-                    $('#section1 .sec2_wrap .sec2_left .smallbox').addClass('dpblock');
+                    $('.line').hide();
+                    $('.longbox').hide();
+                    $('.smallbox').hide();
+                }else if(origin.anchor == 'secondPage' && direction == 'up' || origin.anchor == 'secondPage' && direction == 'down'){
+                    $('.line').hide();
+                    $('.longbox').hide();
+                    $('.smallbox').hide();
+                }else if(origin.anchor == '3rdPage' && direction == 'up' || origin.anchor == '3rdPage' && direction == 'down'){
+                    $('.line2').hide();
+                }else if(origin.anchor == '4thPage' && direction == 'up' || origin.anchor == '4thPage' && direction == 'down'){
+                    $('.line3').hide();
+                    $('.sec4_longbox').hide();
+                    $('.sec4_smallbox').hide();
                 }
             }
-            // afterLoad:function(origin, destination, direction){
-            //     if(origin.anchor == 'firstPage' && direction == 'up' || origin.anchor == 'secondPage' && direction == 'down'){
-            //         $('#section1 .sec2_wrap .sec2_left .longbox').removeClass('dpblock');
-            //         $('#section1 .sec2_wrap .sec2_left .smallbox').removeClass('dpblock');
-            //     }else if(origin.anchor == 'firstPage' && direction == 'down' || origin.anchor == '3rdPage' && direction == 'up'){
-            //         $('#section1 .sec2_wrap .sec2_left .longbox').addClass('dpblock').fadeIn(5000);
-            //         $('#section1 .sec2_wrap .sec2_left .smallbox').addClass('dpblock');
-            //     }
-            // }
-        
+    
+    
+    
+    
     });
 </script>
 </body>

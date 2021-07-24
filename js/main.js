@@ -22,15 +22,15 @@ $(document).ready(function(){
 
         $("html, body").on('mousewheel DOMMouseScroll',function(){
             $('header .sub').fadeOut(200)
-        
+            
         });
 
         $('.hamburger_menu').css('display','none');
         $('.hamburger').click(function(){
-            $('.hamburger_menu').css('display','block');
+            $('.hamburger_menu').slideDown();
         });
         $('.x_btn').click(function(){
-            $('.hamburger_menu').css('display','none');
+            $('.hamburger_menu').slideUp();
         });
         
         
