@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    $('header .sub').css('top','-55vw');
-    $('header .sub').css('display','none');
+    $('.pc_header .sub').css('top','-55vw');
+    $('.pc_header .sub').css('display','none');
         $('.menu > ul > li > a').click(function(){
             $(this).parent('li').children('ul').css('top','-2.8vw');
             $(this).parent('li').children('ul').css('display','block');
@@ -13,7 +13,7 @@ $(document).ready(function(){
         });
         
         $(document).mouseup(function (e){
-            let other = $('header .sub');
+            let other = $('.pc_header .sub');
             if( other.has(e.target).length === 0)
             { other.fadeOut(200);
             
@@ -21,21 +21,41 @@ $(document).ready(function(){
         });
 
         $("html, body").on('mousewheel DOMMouseScroll',function(){
-            $('header .sub').fadeOut(200)
+            $('.pc_header .sub').fadeOut(200)
             
         });
 
         $('.hamburger_menu').css('display','none');
-        $('.hamburger').click(function(){
+        $('.pc_header .hamburger').click(function(){
             $('.hamburger_menu').slideDown();
         });
-        $('.x_btn').click(function(){
+        $('.hamburger_menu .x_btn').click(function(){
             $('.hamburger_menu').slideUp();
         });
         
-        
-        
+        //모바일
+        $('.mo_hamburger_menu').css('display','none');
+        $('.mo_header .hamburger a').click(function(){
+            $('.mo_hamburger_menu').slideDown();
+        });
+        $('.mo_hamburger_menu .x_btn').click(function(){
+            $('.mo_hamburger_menu').slideUp();
+        });
 
+        $('.mo_hamburger_menu .ham_menu > ul > li .sub').hide();
+        $('.mo_hamburger_menu .ham_menu > ul > li > p').click(function(){
+            $(this).parent('li').children('.sub').slideToggle();
+            $(this).parent('li').siblings('li').children('.sub').slideUp();
+        });
+        // $(document).mouseup(function (e){
+        //     let other = $('.mo_hamburger_menu .ham_menu > ul > li .sub');
+        //     if( other.has(e.target).length >= 0)
+        //     { other.slideUp();
+        
+        //     }
+        // });
+
+        
 
 
 

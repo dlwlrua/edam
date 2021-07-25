@@ -28,7 +28,7 @@
     </script>
 </head>
 <body>
-    <header>
+    <header class="pc_header">
         <div class="logo">
             <a href="index.html">로고</a>
         </div>
@@ -77,12 +77,65 @@
             </ul>
         </div>
     </header>
+    <header class="mo_header">
+        <div class="logo">
+            <a href="index.html">로고</a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li class="menu_1">
+                    <a href="#">EDAM</a>
+                    <ul class="sub sub1">
+                        <li><a>EDAM</a></li>
+                        <li class="sub_top st1"><a href="#"><img src="icon/top-white.png" alt="위로"></a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">NOTICE</a></li>
+                <li class="menu_2">
+                    <a href="#">ARTISTS</a>
+                    <ul class="sub sub2">
+                        <li><a>ARTISTS</a></li>
+                        <li class="sub_top st2" ><a href="#"><img src="icon/top-white.png" alt="위로"></a></li>
+                        <li><a href="#">IU</a></li>
+                        <li><a href="#">Shin SaeKyeong</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.madeedam.com">madeEDAM</a></li>
+                <li class="menu_3">
+                    <a href="#">AUDITION</a>
+                    <ul class="sub sub3">
+                        <li><a>AUDITION</a></li>
+                        <li class="sub_top st3"><a href="#"><img src="icon/top-white.png" alt="위로"></a></li>
+                        <li><a href="#">지원안내</a></li>
+                        <li><a href="#">모집분야</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="hamburger">
+            <a href="#">햄버거</a>
+        </div>
+        <div class="lang">
+            <ul>
+                <li><a href="#">EN</a></li>
+                <li><a href="#">KO</a></li>
+            </ul>
+        </div>
+    </header><!--mo_header end-->
     <div class="hamburger_menu">
         <div class="btn_wrap">
             <div class="x_btn"><a href="#"><img src="icon/x-white.png" alt="닫기"></a></div>
         </div>
         <div class="ham_menu">
             <ul>
+                <div class="ham_menu_lang">
+                    <a href="#">KOREAN</a>
+                    <a href="#">ENGLISH</a>
+                </div>
                 <li class="menu_1">
                     <p>EDAM</p>
                     <ul class="sub sub1">
@@ -109,7 +162,44 @@
                 </li>
             </ul>
         </div>
+    </div><!--hamburger_menu end-->
+    <div class="mo_hamburger_menu">
+        <div class="btn_wrap">
+            <div class="x_btn"><a href="#"><img src="icon/x-white.png" alt="닫기"></a></div>
         </div>
+        <div class="ham_menu">
+            <ul>
+                <div class="ham_menu_lang">
+                    <a href="#">KOREAN</a>
+                    <a href="#">ENGLISH</a>
+                </div>
+                <li class="menu_1">
+                    <p>EDAM</p>
+                    <ul class="sub sub1">
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </li>
+                <li><p>NOTICE</p></li>
+                <li class="menu_2">
+                    <p>ARTISTS</p>
+                    <ul class="sub sub2">
+                        <li><a href="#">IU</a></li>
+                        <li><a href="#">Shin SaeKyeong</a></li>
+                    </ul>
+                </li>
+                <li><p>madeEDAM</p></li>
+                <li class="menu_3">
+                    <p>AUDITION</p>
+                    <ul class="sub sub3">
+                        <li><a href="#">지원안내</a></li>
+                        <li><a href="#">모집분야</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div><!--mo_hamburger_menu end-->
     <section>
         <div id="fullpage">
             <div class="section" id="section0">
@@ -272,10 +362,10 @@
         afterLoad:function(origin, destination){
             
                 if(origin.anchor=='firstPage' && destination.anchor=='firstPage'){
-                    $('.menu > ul > li > a').addClass('colorChange');
-                    $('.lang ul li a').addClass('colorChange');
-                    $('.lang ul li:last').addClass('colorChange');
-                    $('header .logo  a').addClass('colorChange');
+                    $('.pc_header .menu > ul > li > a').addClass('colorChange');
+                    $('.pc_header .lang ul li a').addClass('colorChange');
+                    $('.pc_header .lang ul li:last').addClass('colorChange');
+                    $('.pc_header .logo  a').addClass('colorChange');
                     $('#section0').addClass('colorChange');
                     $('#section0 .sec_logo a').addClass('colorChange');
                     $('#section0 .sec_logo p').addClass('colorChange');
@@ -375,8 +465,8 @@
             onLeave:function(origin, destination, direction){
                 if(origin.anchor== 'firstPage'){
                     $('.menu > ul > li > a').removeClass('colorChange');
-                    $('.lang ul li a').removeClass('colorChange');
-                    $('.lang ul li:last').removeClass('colorChange');
+                    $('.pc_header .lang ul li a').removeClass('colorChange');
+                    $('.pc_header .lang ul li:last').removeClass('colorChange');
                     $('header .logo  a').removeClass('colorChange');
                     $('#section0').removeClass('colorChange');
                     $('#section0 .sec_logo a').removeClass('colorChange');
@@ -394,8 +484,8 @@
                     
                 }else if(origin.anchor == 'secondPage' && direction == 'up' || origin.anchor == '4thPage' && direction == 'down'){
                     $('.menu > ul > li > a').addClass('colorChange');
-                    $('.lang ul li a').addClass('colorChange');
-                    $('.lang ul li:last').addClass('colorChange');
+                    $('.pc_header .lang ul li a').addClass('colorChange');
+                    $('.pc_header .lang ul li:last').addClass('colorChange');
                     $('header .logo  a').addClass('colorChange');
                     $('#section0').addClass('colorChange');
                     $('#section0 .sec_logo a').addClass('colorChange');
