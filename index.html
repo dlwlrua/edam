@@ -28,7 +28,7 @@
     </script>
 </head>
 <body>
-    <header class="pc_header">
+    <header>
         <div class="logo">
             <a href="index.html">로고</a>
         </div>
@@ -77,17 +77,19 @@
             </ul>
         </div>
     </header>
-    <header class="mo_header">
-        <div class="logo">
-            <a href="index.html">로고</a>
+    <div class="hamburger_menu">
+        <div class="btn_wrap">
+            <div class="x_btn"><a href="#"><img src="icon/x-white.png" alt="닫기"></a></div>
         </div>
-        <div class="menu">
+        <div class="ham_menu">
             <ul>
+                <div class="ham_menu_lang">
+                    <a href="#" class="ko">KOREAN</a>
+                    <a href="#" class="en">ENGLISH</a>
+                </div>
                 <li class="menu_1">
                     <a href="#">EDAM</a>
                     <ul class="sub sub1">
-                        <li><a>EDAM</a></li>
-                        <li class="sub_top st1"><a href="#"><img src="icon/top-white.png" alt="위로"></a></li>
                         <li><a href="#">ABOUT</a></li>
                         <li><a href="#">CONTACT</a></li>
                     </ul>
@@ -96,64 +98,13 @@
                 <li class="menu_2">
                     <a href="#">ARTISTS</a>
                     <ul class="sub sub2">
-                        <li><a>ARTISTS</a></li>
-                        <li class="sub_top st2" ><a href="#"><img src="icon/top-white.png" alt="위로"></a></li>
                         <li><a href="#">IU</a></li>
                         <li><a href="#">Shin SaeKyeong</a></li>
                     </ul>
                 </li>
-                <li><a href="https://www.madeedam.com">madeEDAM</a></li>
+                <li><a href="#">madeEDAM</a></li>
                 <li class="menu_3">
                     <a href="#">AUDITION</a>
-                    <ul class="sub sub3">
-                        <li><a>AUDITION</a></li>
-                        <li class="sub_top st3"><a href="#"><img src="icon/top-white.png" alt="위로"></a></li>
-                        <li><a href="#">지원안내</a></li>
-                        <li><a href="#">모집분야</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="hamburger">
-            <a href="#">햄버거</a>
-        </div>
-        <div class="lang">
-            <ul>
-                <li><a href="#">EN</a></li>
-                <li><a href="#">KO</a></li>
-            </ul>
-        </div>
-    </header><!--mo_header end-->
-    <div class="hamburger_menu">
-        <div class="btn_wrap">
-            <div class="x_btn"><a href="#"><img src="icon/x-white.png" alt="닫기"></a></div>
-        </div>
-        <div class="ham_menu">
-            <ul>
-                <div class="ham_menu_lang">
-                    <a href="#">KOREAN</a>
-                    <a href="#">ENGLISH</a>
-                </div>
-                <li class="menu_1">
-                    <p>EDAM</p>
-                    <ul class="sub sub1">
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                </li>
-                <li><p>NOTICE</p></li>
-                <li class="menu_2">
-                    <p>ARTISTS</p>
-                    <ul class="sub sub2">
-                        <li><a href="#">IU</a></li>
-                        <li><a href="#">Shin SaeKyeong</a></li>
-                    </ul>
-                </li>
-                <li><p>madeEDAM</p></li>
-                <li class="menu_3">
-                    <p>AUDITION</p>
                     <ul class="sub sub3">
                         <li><a href="#">지원안내</a></li>
                         <li><a href="#">모집분야</a></li>
@@ -163,43 +114,6 @@
             </ul>
         </div>
     </div><!--hamburger_menu end-->
-    <div class="mo_hamburger_menu">
-        <div class="btn_wrap">
-            <div class="x_btn"><a href="#"><img src="icon/x-white.png" alt="닫기"></a></div>
-        </div>
-        <div class="ham_menu">
-            <ul>
-                <div class="ham_menu_lang">
-                    <a href="#">KOREAN</a>
-                    <a href="#">ENGLISH</a>
-                </div>
-                <li class="menu_1">
-                    <p>EDAM</p>
-                    <ul class="sub sub1">
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                </li>
-                <li><p>NOTICE</p></li>
-                <li class="menu_2">
-                    <p>ARTISTS</p>
-                    <ul class="sub sub2">
-                        <li><a href="#">IU</a></li>
-                        <li><a href="#">Shin SaeKyeong</a></li>
-                    </ul>
-                </li>
-                <li><p>madeEDAM</p></li>
-                <li class="menu_3">
-                    <p>AUDITION</p>
-                    <ul class="sub sub3">
-                        <li><a href="#">지원안내</a></li>
-                        <li><a href="#">모집분야</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div><!--mo_hamburger_menu end-->
     <section>
         <div id="fullpage">
             <div class="section" id="section0">
@@ -228,6 +142,7 @@
             <div class="section" id="section1">
                 <div class="sec2_wrap">
                     <div class="sec2_left">
+                        <h1 class="mobile_txt">ARTISTS</h1>
                         <div class="sec2_left_photo"><a href="#">신세경</a></div>
                         <div class="longbox"></div>
                         <div class="smallbox"></div>
@@ -237,10 +152,11 @@
                             <div class="line"></div>
                         </div>
                         <h1>ARTISTS</h1>
+                        <a href="#" class="mobile_txt">DETAIL MORE</a>
                         <div class="sec2_right_photo"><a href="#">아이유</a></div>
                     </div>
                 </div>
-            </div>
+            </div><!--section1 end-->
             <div class="section" id="section2">
                 <div class="sec3_wrap">
                     <div class="sec3_left">
@@ -252,7 +168,7 @@
                         </div>
                         <ul>
                             <li>
-                                <img src="img/1-1.png" alt="라일락">
+                                <span class="p1"></span>
                                 <div class="black_30">
                                     <a href="#"><img src="img/lilac_text.png" alt="라일락텍스트"></a>
                                 </div>
@@ -262,7 +178,7 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="img/2-1.png" alt="챗셔">
+                                <span class="p2"></span>
                                 <div class="black_30">
                                     <a href="#"><img src="img/chatshire_text.png" alt="챗셔텍스트"></a>
                                 </div>
@@ -272,7 +188,7 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="img/3-1.png" alt="팔레트">
+                                <span class="p3"></span>
                                 <div class="black_30">
                                     <a href="#"><img src="img/palette_text.png" alt="팔레트텍스트"></a>
                                 </div>
@@ -282,10 +198,10 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </div><!--sec3_left end-->
                     <div class="sec3_right">
                         <div>
-                            <img src="img/Mymister2.png" alt="나의아저씨">
+                            <span class="p4"></span>
                             <div class="right_black">
                                 <a href="#"><img src="img/mymister_text.png" alt="나의아저씨텍스트"></a>
                             </div>
@@ -294,7 +210,7 @@
                             </div>
                         </div>
                         <div>
-                            <img src="img/narsha2.png" alt="육룡이나르샤">
+                            <span class="p5"></span>
                             <div class="right_black">
                                 <a href="#"><img src="img/narsha_text.png" alt="육룡이나르샤텍스트"></a>
                             </div>
@@ -303,7 +219,7 @@
                             </div>
                         </div>
                         <div>
-                            <img src="img/Godhand2.png" alt="타짜">
+                            <span class="p6"></span>
                             <div class="right_black">
                                 <a href="#"><img src="img/godhand_text.png" alt="타짜텍스트"></a>
                             </div>
@@ -311,9 +227,9 @@
                                 <a href="#">+</a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div><!--sec3_right end-->
+                </div><!--sec3_wrap end-->
+            </div><!--section2 end-->
             <div class="section" id="section3">
                 <div class="sec4_wrap">
                     <div class="sec4_left">
@@ -331,9 +247,19 @@
                             <span></span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                    <div class="sec4_footer">
+                        <div class="footer_logo"><img src="img/EDAM_Logo_white.png" alt="로고"></div>
+                        <p>17, Teheran-ro 103-gil, Gangnam-gu, Seoul, Republick of Korea</p>
+                        <span>ⓒ 2020 EDAM. All rights reserved.</span>   <span>edam@edam-ent.com</span>
+                        <div class="footer_sns">
+                            <img src="icon/Facebook-white.png" alt="페이스북">
+                            <img src="icon/insta-white.png" alt="인스타그램">
+                            <img src="icon/youtube-white.png" alt="유튜브">
+                        </div>
+                    </div>
+                </div><!--sec4_wrap end-->
+            </div><!--section3 end-->
+        </div><!--fullpage end-->
     </section>
     <footer>
         <div class="left">
@@ -362,10 +288,10 @@
         afterLoad:function(origin, destination){
             
                 if(origin.anchor=='firstPage' && destination.anchor=='firstPage'){
-                    $('.pc_header .menu > ul > li > a').addClass('colorChange');
-                    $('.pc_header .lang ul li a').addClass('colorChange');
-                    $('.pc_header .lang ul li:last').addClass('colorChange');
-                    $('.pc_header .logo  a').addClass('colorChange');
+                    $('header .menu > ul > li > a').addClass('colorChange');
+                    $('header .lang ul li a').addClass('colorChange');
+                    $('header .lang ul li:last').addClass('colorChange');
+                    $('header .logo  a').addClass('colorChange');
                     $('#section0').addClass('colorChange');
                     $('#section0 .sec_logo a').addClass('colorChange');
                     $('#section0 .sec_logo p').addClass('colorChange');
@@ -465,8 +391,8 @@
             onLeave:function(origin, destination, direction){
                 if(origin.anchor== 'firstPage'){
                     $('.menu > ul > li > a').removeClass('colorChange');
-                    $('.pc_header .lang ul li a').removeClass('colorChange');
-                    $('.pc_header .lang ul li:last').removeClass('colorChange');
+                    $('header .lang ul li a').removeClass('colorChange');
+                    $('header .lang ul li:last').removeClass('colorChange');
                     $('header .logo  a').removeClass('colorChange');
                     $('#section0').removeClass('colorChange');
                     $('#section0 .sec_logo a').removeClass('colorChange');
@@ -484,8 +410,8 @@
                     
                 }else if(origin.anchor == 'secondPage' && direction == 'up' || origin.anchor == '4thPage' && direction == 'down'){
                     $('.menu > ul > li > a').addClass('colorChange');
-                    $('.pc_header .lang ul li a').addClass('colorChange');
-                    $('.pc_header .lang ul li:last').addClass('colorChange');
+                    $('header .lang ul li a').addClass('colorChange');
+                    $('header .lang ul li:last').addClass('colorChange');
                     $('header .logo  a').addClass('colorChange');
                     $('#section0').addClass('colorChange');
                     $('#section0 .sec_logo a').addClass('colorChange');
